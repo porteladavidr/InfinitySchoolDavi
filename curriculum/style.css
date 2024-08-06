@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+    color: #f0f0f0;
+    font-size: 16px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.3125rem 0;
+}
+
+header a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 1.25rem;
+}
+
+section {
+    background: #444;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    border-bottom: 0.125rem solid #2196f3;
+    padding-bottom: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.job, .education-item {
+    margin-bottom: 1.25rem;
+}
+
+.job h3, .education-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+}
+
+a {
+    color: #2196f3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
