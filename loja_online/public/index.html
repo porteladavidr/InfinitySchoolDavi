@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Loja Online</h1>
+    <nav>
+      <button id="login-button">Login</button>
+      <button id="register-button">Registrar</button>
+    </nav>
+  </header>
+
+  <!-- Modal de Login e Registro -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal()">&times;</span>
+      <div id="auth-section">
+        <h2>Registrar</h2>
+        <form id="register-form">
+          <input type="text" id="nome" placeholder="Nome" required>
+          <input type="email" id="email-register" placeholder="Email" required>
+          <input type="password" id="senha-register" placeholder="Senha" required>
+          <button type="submit">Registrar</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="login-form">
+          <input type="email" id="email-login" placeholder="Email" required>
+          <input type="password" id="senha-login" placeholder="Senha" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de Produtos -->
+  <h2>Catálogo de Produtos</h2>
+  <div id="products" class="product-grid"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
