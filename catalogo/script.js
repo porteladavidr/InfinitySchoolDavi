@@ -1,102 +1,93 @@
-let allMovies = []; // Variável global para armazenar todos os filmes
+let todosOsFilmes = [];
 
-async function fetchMovies() {
-  const apiKey = '77c4e2b070a2e1396500d0b42ebf7cec';
-  const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pt-BR`;
+async function buscarFilmes() {
+  const chaveApi = '77c4e2b070a2e1396500d0b42ebf7cec';
+  const urlApi = `https://api.themoviedb.org/3/movie/popular?api_key=${chaveApi}&language=pt-BR`;
 
   try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-
-    // Armazena todos os filmes
-    allMovies = data.results;
-
-    // Exibe os filmes no carrossel
-    displayCarousel(allMovies);
-    
-    // Inicia o carrossel
-    setInterval(rotateSlides, 3000); // Muda os slides a cada 3 segundos
-  } catch (error) {
-    console.error('Erro ao buscar filmes:', error);
+    const resposta = await fetch(urlApi);
+    const dados = await resposta.json();
+    todosOsFilmes = dados.results;
+    exibirCarrossel(todosOsFilmes);
+    setInterval(rotacionarSlides, 3000);
+  } catch (erro) {
+    console.error('Erro ao buscar filmes:', erro);
   }
 }
 
-function displayCarousel(movies) {
+function exibirCarrossel(filmes) {
   const carrossel = document.querySelector('#carrossel');
-  carrossel.innerHTML = ''; // Limpa o carrossel antes de adicionar novos filmes
+  carrossel.innerHTML = '';
 
-  const melhoresFilmes = movies
+  const melhoresFilmes = filmes
     .sort((a, b) => b.vote_average - a.vote_average)
     .slice(0, 10);
 
-  melhoresFilmes.forEach(movie => {
+  melhoresFilmes.forEach(filme => {
     const slide = document.createElement('div');
     slide.classList.add('slide');
 
     const img = document.createElement('img');
-    img.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-    img.alt = movie.title;
+    img.src = `https://image.tmdb.org/t/p/w500/${filme.poster_path}`;
+    img.alt = filme.title;
 
-    const title = document.createElement('p');
-    title.textContent = `${movie.title} (${movie.vote_average})`;
+    const titulo = document.createElement('p');
+    titulo.textContent = `${filme.title} (${filme.vote_average})`;
 
     slide.appendChild(img);
-    slide.appendChild(title);
+    slide.appendChild(titulo);
     carrossel.appendChild(slide);
   });
 }
 
-// Função para buscar filmes a partir da entrada do usuário
-async function searchMovies(query) {
-  const apiKey = '77c4e2b070a2e1396500d0b42ebf7cec';
-  const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=pt-BR&query=${encodeURIComponent(query)}`;
+async function buscarFilmesPorConsulta(consulta) {
+  const chaveApi = '77c4e2b070a2e1396500d0b42ebf7cec';
+  const urlApi = `https://api.themoviedb.org/3/search/movie?api_key=${chaveApi}&language=pt-BR&query=${encodeURIComponent(consulta)}`;
 
   try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    return data.results; // Retorna os resultados da busca
-  } catch (error) {
-    console.error('Erro ao buscar filmes:', error);
+    const resposta = await fetch(urlApi);
+    const dados = await resposta.json();
+    return dados.results;
+  } catch (erro) {
+    console.error('Erro ao buscar filmes:', erro);
     return [];
   }
 }
 
-// Função para filtrar filmes conforme a digitação
-async function filterMovies() {
-  const input = document.querySelector('#searchInput').value;
-  const resultsContainer = document.querySelector('#searchResults');
-  resultsContainer.innerHTML = ''; // Limpa resultados anteriores
+async function filtrarFilmes() {
+  const entrada = document.querySelector('#searchInput').value;
+  const containerResultados = document.querySelector('#searchResults');
+  containerResultados.innerHTML = '';
 
-  if (input) {
-    const filteredMovies = await searchMovies(input);
+  if (entrada) {
+    const filmesFiltrados = await buscarFilmesPorConsulta(entrada);
     
-    filteredMovies.forEach(movie => {
-      const resultDiv = document.createElement('div');
-      resultDiv.classList.add('result-item');
+    filmesFiltrados.forEach(filme => {
+      const divResultado = document.createElement('div');
+      divResultado.classList.add('resultado-item');
 
       const img = document.createElement('img');
-      img.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-      img.alt = movie.title;
-      img.classList.add('result-image'); // Adiciona classe para estilização
+      img.src = `https://image.tmdb.org/t/p/w500/${filme.poster_path}`;
+      img.alt = filme.title;
+      img.classList.add('resultado-imagem');
 
-      const title = document.createElement('h4');
-      title.textContent = movie.title;
+      const titulo = document.createElement('h4');
+      titulo.textContent = filme.title;
 
-      const synopsis = document.createElement('p');
-      synopsis.textContent = movie.overview; // A sinopse já está em português
+      const sinopse = document.createElement('p');
+      sinopse.textContent = filme.overview;
 
-      const average = document.createElement('p');
-      average.textContent = `Média: ${movie.vote_average}`;
+      const media = document.createElement('p');
+      media.textContent = `Média: ${filme.vote_average}`;
 
-      resultDiv.appendChild(img); // Adiciona a imagem à div do resultado
-      resultDiv.appendChild(title);
-      resultDiv.appendChild(synopsis);
-      resultDiv.appendChild(average);
-      resultsContainer.appendChild(resultDiv);
+      divResultado.appendChild(img);
+      divResultado.appendChild(titulo);
+      divResultado.appendChild(sinopse);
+      divResultado.appendChild(media);
+      containerResultados.appendChild(divResultado);
     });
   }
 }
 
-// Adicionando um evento para o campo de entrada
-document.querySelector('#searchInput').addEventListener('input', filterMovies);
-fetchMovies();
+document.querySelector('#searchInput').addEventListener('input', filtrarFilmes);
+buscarFilmes();

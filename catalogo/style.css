@@ -3,7 +3,7 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
-    overflow-x: hidden; /* Impede a rolagem horizontal indesejada */
+    overflow-x: hidden;
   }
   
   header {
@@ -22,19 +22,19 @@ body {
   }
   
   #carrossel-container {
-    width: 100%; /* Full width */
-    overflow: hidden; /* Clip overflowing content */
-    position: relative; /* Needed for proper positioning of controls (optional) */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
   }
   
   #carrossel {
-    display: flex; /* Arrange slides horizontally */
+    display: flex;
     transition: transform 0.5s ease-in-out;
   }
   
   .slide {
-    flex: 0 0 20%; /* Each slide occupies 20% width */
-    margin: 10px; /* Adjust spacing between slides */
+    flex: 0 0 20%;
+    margin: 10px;
     background-color: #333;
     text-align: center;
     border-radius: 10px;
@@ -48,9 +48,9 @@ body {
   }
   
   .slide img {
-    width: 100%; /* Fill the slide container */
-    height: 300px; /* Set image height */
-    object-fit: cover; /* Crop images to fit while maintaining aspect ratio */
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
     border-radius: 5px;
   }
   
@@ -62,24 +62,24 @@ body {
   
   #searchResults {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens se ajustem na linha */
-    justify-content: space-between; /* Espaço uniforme entre os itens */
-    margin: 20px; /* Margem para o contêiner */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
   }
   
-  .result-item {
-    width: calc(33.33% - 20px); /* Cada item ocupa 1/3 da largura com margens */
-    margin-bottom: 20px; /* Espaço abaixo de cada item */
+  .resultado-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
     background-color: #333;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
-  .result-image {
-    width: 100%; /* Preenche o contêiner */
-    height: auto; /* Mantém a proporção */
+  .resultado-imagem {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-    margin-bottom: 5px; /* Espaço abaixo da imagem */
+    margin-bottom: 5px;
   }
   
