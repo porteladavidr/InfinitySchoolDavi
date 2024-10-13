@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #009933; /* Verde da CBF */
+    color: #fff;
+    padding: 20px;
+}
+
+.time {
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #009933;
+    color: #fff;
+    padding: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.logo {
+    width: 300px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
