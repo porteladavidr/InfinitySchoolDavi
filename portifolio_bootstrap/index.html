@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfólio Pessoal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho (Header) -->
+  <header class="bg-primary text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h3">David Portela</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#cursos">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#projetos">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#curriculum">Curriculum</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home (About) -->
+  <section id="home" class="py-5 text-center">
+    <div class="container">
+      <img src="imagem .png" class="rounded-circle mb-3" alt="Sua Foto" width="150">
+      <h2 class="h4">Sobre Mim</h2>
+      <p class="lead">Este é meu portifólio</p>
+    </div>
+  </section>
+
+  <!-- Cursos (Courses) -->
+  <section id="cursos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="h4 text-center mb-4">Cursos</h2>
+      <div class="row">
+        <!-- Curso 1 -->
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Título do Curso</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Instituição</h6>
+              <p class="card-text">Descrição breve do curso.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Curso 2 -->
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Título do Curso</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Instituição</h6>
+              <p class="card-text">Descrição breve do curso.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Curso 3 -->
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Título do Curso</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Instituição</h6>
+              <p class="card-text">Descrição breve do curso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos (Projects) -->
+  <section id="projetos" class="py-5">
+    <div class="container">
+      <h2 class="h4 text-center mb-4">Projetos</h2>
+      <div class="row">
+        <!-- Projeto 1 -->
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="siteEmConstrucao.png" class="card-img-top" alt="Projeto 1">
+            <div class="card-body">
+              <h5 class="card-title">Título do Projeto</h5>
+              <p class="card-text">Descrição breve do projeto.</p>
+              <a href="#" class="btn btn-primary">Ver detalhes</a>
+            </div>
+          </div>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="siteEmConstrucao.png" class="card-img-top" alt="Projeto 2">
+            <div class="card-body">
+              <h5 class="card-title">Título do Projeto</h5>
+              <p class="card-text">Descrição breve do projeto.</p>
+              <a href="#" class="btn btn-primary">Ver detalhes</a>
+            </div>
+          </div>
+        </div>
+        <!-- Projeto 3 -->
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="siteEmConstrucao.png" class="card-img-top" alt="Projeto 3">
+            <div class="card-body">
+              <h5 class="card-title">Título do Projeto</h5>
+              <p class="card-text">Descrição breve do projeto.</p>
+              <a href="#" class="btn btn-primary">Ver detalhes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Contato (Contact) -->
+  <section id="contato" class="py-5">
+    <div class="container">
+      <h2 class="h4 text-center mb-4">Contato</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com">
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé (Footer) -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Seu Nome - Todos os direitos reservados</p>
+    <div>
+      <a href="#" class="text-white mx-2">LinkedIn</a>
+      <a href="#" class="text-white mx-2">GitHub</a>
+      <a href="#" class="text-white mx-2">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
