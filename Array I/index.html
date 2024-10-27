@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciador de Tarefas Domésticas</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Gerenciador de Tarefas Domésticas</h1>
+
+  <div>
+    <h2>Adicionar Nova Tarefa</h2>
+    <input type="text" id="nomeTarefa" placeholder="Nome da tarefa">
+    <input type="text" id="responsavel" placeholder="Responsável">
+    <input type="date" id="dataVencimento">
+    <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+  </div>
+
+  <h2>Tarefas</h2>
+  <ul id="listaTarefas"></ul>
+</body>
+</html>
