@@ -19,11 +19,10 @@ function calculosMatematicos(numero) {
     const resultadoFatorial = fatorial(numero);
 
     const sequenciaFibonacci = [];
-    let i = 0, a = 0, b = 1;
-    while (i <= numero) {
+    let a = 0, b = 1;
+    for (let i = 0; i <= numero; i++) {
         sequenciaFibonacci.push(a);
         [a, b] = [b, a + b];
-        i++;
     }
 
     return {
