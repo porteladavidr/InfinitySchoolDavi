@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Catálogo de Livros Online</h1>
+
+    <div id="formularioLivro">
+        <h2>Adicionar Novo Livro</h2>
+        <input type="text" id="titulo" placeholder="Título">
+        <input type="text" id="autor" placeholder="Autor">
+        <input type="text" id="genero" placeholder="Gênero">
+        <input type="number" id="ano" min="1000" max="9999" placeholder="Ex: 2023" required>
+        <input type="number" id="avaliacao" min="0" max="5" step="0.1" placeholder="0 a 5" required>
+        <button onclick="adicionarLivro()">Adicionar Livro</button>
+    </div>
+
+    <div id="secaoBusca">
+        <h2>Buscar Livro</h2>
+        <input type="text" id="termoBusca" placeholder="Digite título, autor ou gênero">
+        <button onclick="buscarLivro()">Buscar</button>
+    </div>
+
+    <div id="secaoClassificacao">
+        <h2>Classificar Livros</h2>
+        <button onclick="classificarLivros('titulo')">Título</button>
+        <button onclick="classificarLivros('autor')">Autor</button>
+        <button onclick="classificarLivros('avaliacao')">Avaliação</button>
+    </div>
+
+    <div id="listaLivros">
+        <h2>Lista de Livros</h2>
+        <ul id="livros"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
