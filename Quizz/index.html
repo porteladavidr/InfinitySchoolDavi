@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .quiz-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+        }
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+        #feedback {
+            font-size: 1.2em;
+            margin-top: 15px;
+        }
+        #reload-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Interativo</h1>
+        <div id="question-container">
+            <!-- Pergunta será inserida aqui pelo JavaScript -->
+        </div>
+        <div id="options-container">
+            <!-- Opções serão inseridas aqui pelo JavaScript -->
+        </div>
+        <div id="feedback"></div>
+        <button id="reload-btn" style="display: none;">Reload</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
