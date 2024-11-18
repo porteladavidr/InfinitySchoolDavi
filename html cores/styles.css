@@ -1,0 +1,72 @@
+/* Definindo variáveis de cores */
+:root {
+    --cor-primaria: #4CAF50; /* Verde */
+    --cor-secundaria: #ffffff; /* Branco */
+    --cor-texto: #333333; /* Cinza escuro */
+    --cor-fundo: #f9f9f9; /* Cinza claro */
+  }
+  
+  /* Aplicando estilos gerais */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  /* Main content */
+  main {
+    padding: 2rem;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem; /* Usando rem para flexibilidade */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+  }
+  
+  /* Responsividade com media queries */
+  @media (max-width: 768px) {
+    body {
+      font-size: 1rem; /* Reduzindo o tamanho do texto em telas menores */
+    }
+  
+    header {
+      padding: 1.5rem 0;
+    }
+  
+    .content {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  
+    footer {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    body {
+      font-size: 1.2rem; /* Tamanho de texto maior para telas maiores */
+    }
+  }
+  
